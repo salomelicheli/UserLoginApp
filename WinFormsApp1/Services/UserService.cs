@@ -36,20 +36,6 @@ namespace WinFormsApp1.Services
             return true;
         }
 
-        private static bool isEmailValid(string email)
-        {
-            bool isValid = false;
-
-            foreach(var item in email)
-            {
-                if(item == '@')
-                {
-                    isValid = true;
-                }
-            }
-            return isValid;
-        }
-
         public static User AuthenticateUser(string username, string password)
         {
             var users = FileService.GetAllUsers();
